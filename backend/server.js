@@ -12,9 +12,17 @@ import foodModel from "./models/foodModel.js";
 const app = express();
 const port = process.env.PORT || 4000;
 
+// CORS configuration
+const corsOptions = {
+  origin: process.env.FRONTEND_URL || "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
 // middlewares
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 // db connection
 connectDB()
@@ -35,7 +43,7 @@ app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
 
 app.get("/", (req, res) => {
-  res.send("API Working");
+  res.json({ message: "Food Delivery API is running", status: "success" });
 });
 
 // Add error handling middleware
