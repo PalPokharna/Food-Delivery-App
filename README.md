@@ -28,8 +28,8 @@ A full-stack food delivery web application with MongoDB, Express, React, and Nod
 1. Clone the repository:
 
 ```
-git clone https://github.com/yourusername/food-delivery-app.git
-cd food-delivery-app
+git clone https://github.com/PalPokharna/Food-Delivery-App.git
+cd Food-Delivery-App
 ```
 
 2. Set up the backend:
@@ -110,4 +110,4 @@ MIT
 
 ## Contact
 
-Your Name - your.email@example.com
+Pal Pokharna
